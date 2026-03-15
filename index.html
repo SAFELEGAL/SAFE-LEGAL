@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Legal – Professional Legal Documents</title>
+  <meta name="description" content="Professional NDAs, freelance agreements, and privacy policies tailored to your needs. Affordable, fast, and fully customized." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 1L2 5v8l7 4 7-4V5L9 1z" stroke="#0B1F3A" stroke-width="1.5" fill="none"/>
+        <path d="M9 6v6M6.5 9h5" stroke="#0B1F3A" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="nav-brand">Safe Legal<span>Legal Document Services</span></div>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Documents</a>
+    <a href="#generator">Get Started</a>
+    <a href="#how">How It Works</a>
+  </div>
+  <a class="nav-cta" href="#generator">Get My Document</a>
+</nav>
+
+<!-- DISCLAIMER BAR -->
+<div class="disclaimer-bar">
+  <p>Safe Legal is not a law firm and does not provide legal advice. Documents are self-help legal forms for informational purposes only. We recommend consulting a licensed attorney in your state for advice specific to your situation.</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Professional Legal Documents · United States</div>
+  <h1>Reliable legal documents, <em>tailored to your needs</em></h1>
+  <p>Professional-grade NDAs, freelance agreements, and privacy policies — crafted to your specific situation and delivered as fast as possible.</p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="#generator">Get my document now</a>
+    <a class="btn-outline" href="#services">Browse documents</a>
+  </div>
+  <div class="hero-trust">
+    <div class="trust-item"><div class="trust-dot"></div>Attorney-reviewed templates</div>
+    <div class="trust-item"><div class="trust-dot"></div>Fully customized to your needs</div>
+    <div class="trust-item"><div class="trust-dot"></div>Editable Word format</div>
+    <div class="trust-item"><div class="trust-dot"></div>Secure payment via Stripe</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-label">Our Documents</div>
+  <div class="section-title">What do you need today?</div>
+  <div class="section-sub">Each document is customized to your specific situation — not a generic one-size-fits-all form.</div>
+  <div class="cards-grid">
+    <div class="service-card featured">
+      <div class="card-tag">Most popular</div>
+      <div class="card-icon">🤝</div>
+      <div class="card-title">Non-Disclosure Agreement</div>
+      <div class="card-desc">Protect your confidential information with a professionally drafted NDA. One-way or mutual, tailored to your business relationship.</div>
+      <div class="card-price">$29 <span>/ document</span></div>
+      <a class="card-btn" href="#generator" onclick="switchTab('nda')">Get my NDA</a>
+    </div>
+    <div class="service-card">
+      <div class="card-icon">💻</div>
+      <div class="card-title">Freelance Service Agreement</div>
+      <div class="card-desc">Scope of work, payment terms, IP ownership, and termination clauses — everything a freelancer or client needs.</div>
+      <div class="card-price">$39 <span>/ document</span></div>
+      <a class="card-btn" href="#generator" onclick="switchTab('freelance')">Get my agreement</a>
+    </div>
+    <div class="service-card">
+      <div class="card-icon">🔒</div>
+      <div class="card-title">Privacy Policy + Terms</div>
+      <div class="card-desc">CCPA and GDPR-aligned privacy policy and terms of service for your website or app. Required for any online business.</div>
+      <div class="card-price">$49 <span>/ document</span></div>
+      <a class="card-btn" href="#generator" onclick="switchTab('privacy')">Get my policy</a>
+    </div>
+    <div class="service-card">
+      <div class="card-icon">📋</div>
+      <div class="card-title">Document Review</div>
+      <div class="card-desc">Already have a contract? We'll review it, flag potential issues, and suggest improvements tailored to your situation.</div>
+      <div class="card-price">$79 <span>/ review</span></div>
+      <a class="card-btn" href="mailto:contact@safelegal.com">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="why-inner">
+    <div class="section-label">Why Safe Legal</div>
+    <div class="section-title">Professional documents without the attorney fees</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-title">Fully customized</div>
+        <div class="why-desc">No generic templates. Every document reflects your specific parties, terms, and requirements.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-title">As fast as possible</div>
+        <div class="why-desc">Fill in the form and receive your document tailored to your needs in the shortest time possible.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-title">Affordable and transparent</div>
+        <div class="why-desc">Fixed pricing with no hidden fees. A fraction of what a traditional attorney would charge.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-title">Editable Word file</div>
+        <div class="why-desc">You receive a fully editable .docx file so you can make any final adjustments you need.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GENERATOR -->
+<section class="generator-section" id="generator">
+  <div class="generator-inner">
+    <div class="section-label">Get Your Document</div>
+    <div class="section-title">Fill in the details</div>
+    <div class="section-sub">Tell us about your situation. We'll prepare your document and deliver it as fast as possible.</div>
+
+    <div class="tabs">
+      <button class="tab active" id="tab-nda" onclick="switchTab('nda')">NDA</button>
+      <button class="tab" id="tab-freelance" onclick="switchTab('freelance')">Freelance Agreement</button>
+      <button class="tab" id="tab-privacy" onclick="switchTab('privacy')">Privacy Policy</button>
+    </div>
+
+    <div class="form-box">
+      <!-- NDA -->
+      <div id="panel-nda" class="panel active">
+        <div class="form-grid">
+          <div class="form-group"><label>Disclosing Party</label><input id="nda-disclosing" placeholder="e.g. Acme Corp LLC" /></div>
+          <div class="form-group"><label>Receiving Party</label><input id="nda-receiving" placeholder="e.g. John Smith" /></div>
+          <div class="form-group"><label>Type of NDA</label>
+            <select id="nda-type"><option value="one-way (unilateral)">One-way (unilateral)</option><option value="mutual (bilateral)">Mutual (bilateral)</option></select>
+          </div>
+          <div class="form-group"><label>Governing state</label>
+            <select id="nda-state"><option value="California">California</option><option value="New York">New York</option><option value="Texas">Texas</option><option value="Florida">Florida</option><option value="Delaware">Delaware</option><option value="Washington">Washington</option><option value="Illinois">Illinois</option><option value="Other">Other state</option></select>
+          </div>
+          <div class="form-group"><label>Duration</label>
+            <select id="nda-duration"><option value="1 year">1 year</option><option value="2 years">2 years</option><option value="3 years">3 years</option><option value="5 years">5 years</option><option value="indefinite">Indefinite</option></select>
+          </div>
+          <div class="form-group"><label>Purpose of disclosure</label><input id="nda-purpose" placeholder="e.g. Exploring a business partnership" /></div>
+          <div class="form-group full"><label>Additional details or special clauses</label><textarea id="nda-details" placeholder="Any specific exclusions, non-compete language, or other requirements..."></textarea></div>
+        </div>
+        <button class="gen-btn" onclick="handleCheckout('nda', 29)">Get my NDA · $29</button>
+        <p class="gen-note">Delivered as an editable Word document · Customized to your situation · As fast as possible</p>
+      </div>
+
+      <!-- FREELANCE -->
+      <div id="panel-freelance" class="panel">
+        <div class="form-grid">
+          <div class="form-group"><label>Client</label><input id="fl-client" placeholder="e.g. Startup Inc." /></div>
+          <div class="form-group"><label>Freelancer / Service Provider</label><input id="fl-freelancer" placeholder="e.g. Jane Doe" /></div>
+          <div class="form-group full"><label>Scope of services</label><textarea id="fl-scope" placeholder="e.g. Web design and development, 5 pages, mobile optimization"></textarea></div>
+          <div class="form-group"><label>Payment amount (USD)</label><input id="fl-payment" placeholder="e.g. $3,500 flat fee" /></div>
+          <div class="form-group"><label>Payment schedule</label>
+            <select id="fl-schedule"><option value="50% upfront, 50% on delivery">50% upfront / 50% on delivery</option><option value="100% upfront">100% upfront</option><option value="monthly retainer">Monthly retainer</option><option value="milestone-based">Milestone-based</option></select>
+          </div>
+          <div class="form-group"><label>Project timeline</label><input id="fl-timeline" placeholder="e.g. 6 weeks from signing" /></div>
+          <div class="form-group"><label>Governing state</label>
+            <select id="fl-state"><option value="California">California</option><option value="New York">New York</option><option value="Texas">Texas</option><option value="Florida">Florida</option><option value="Delaware">Delaware</option><option value="Washington">Washington</option><option value="Illinois">Illinois</option><option value="Other">Other state</option></select>
+          </div>
+          <div class="form-group"><label>IP ownership</label>
+            <select id="fl-ip"><option value="Client owns all work product upon final payment">Client owns all work upon full payment</option><option value="Freelancer retains ownership, grants license to client">Freelancer retains, grants license</option></select>
+          </div>
+          <div class="form-group full"><label>Additional requirements</label><textarea id="fl-details" placeholder="Non-compete, revision rounds, kill fee, confidentiality, etc."></textarea></div>
+        </div>
+        <button class="gen-btn" onclick="handleCheckout('freelance', 39)">Get my freelance agreement · $39</button>
+        <p class="gen-note">Delivered as an editable Word document · Customized to your situation · As fast as possible</p>
+      </div>
+
+      <!-- PRIVACY -->
+      <div id="panel-privacy" class="panel">
+        <div class="form-grid">
+          <div class="form-group"><label>Business / website name</label><input id="pp-name" placeholder="e.g. MyShop Inc." /></div>
+          <div class="form-group"><label>Website URL</label><input id="pp-url" placeholder="e.g. www.myshop.com" /></div>
+          <div class="form-group"><label>Type of business</label>
+            <select id="pp-type"><option value="e-commerce store">E-commerce store</option><option value="SaaS / web app">SaaS / web app</option><option value="blog or content site">Blog or content site</option><option value="service business">Service business</option><option value="mobile app">Mobile app</option></select>
+          </div>
+          <div class="form-group"><label>Data collected from users</label>
+            <select id="pp-data"><option value="name, email, and payment info">Name, email, payment info</option><option value="name and email only">Name and email only</option><option value="name, email, address, and usage data">Name, email, address, usage data</option><option value="only anonymous analytics">Only anonymous analytics</option></select>
+          </div>
+          <div class="form-group"><label>Third-party services used</label>
+            <select id="pp-third"><option value="Google Analytics, Stripe">Google Analytics + Stripe</option><option value="Google Analytics only">Google Analytics only</option><option value="Stripe only">Stripe only</option><option value="Mailchimp and Google Analytics">Mailchimp + Google Analytics</option><option value="none">None</option></select>
+          </div>
+          <div class="form-group"><label>Business state</label>
+            <select id="pp-state"><option value="California (CCPA applies)">California (CCPA)</option><option value="New York">New York</option><option value="Texas">Texas</option><option value="Florida">Florida</option><option value="Other US state">Other US state</option></select>
+          </div>
+          <div class="form-group full"><label>Additional details</label><textarea id="pp-details" placeholder="Cookie policy, newsletter opt-in, COPPA compliance, etc."></textarea></div>
+        </div>
+        <button class="gen-btn" onclick="handleCheckout('privacy', 49)">Get my Privacy Policy + Terms · $49</button>
+        <p class="gen-note">Delivered as an editable Word document · CCPA & GDPR-aligned · As fast as possible</p>
+      </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div id="checkout-modal" class="modal" style="display:none;">
+      <div class="modal-box">
+        <div class="modal-header">
+          <span id="modal-title">Complete your order</span>
+          <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="order-summary">
+            <span id="modal-doc-name">NDA</span>
+            <span id="modal-price">$29</span>
+          </div>
+          <div class="form-group" style="margin-bottom:12px;">
+            <label>Your email address</label>
+            <input type="email" id="checkout-email" placeholder="you@example.com" />
+            <p style="font-size:11px;color:var(--muted);margin-top:4px;">Your completed document will be sent to this email.</p>
+          </div>
+          <button class="gen-btn" id="pay-btn" onclick="processPayment()">Pay securely with Stripe</button>
+          <p class="gen-note">🔒 Secure payment · 256-bit SSL encryption · Powered by Stripe</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-label">Process</div>
+  <div class="section-title">Simple, clear, and tailored to you</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-title">Fill in the form</div>
+      <div class="step-desc">Tell us about the parties and specific terms you need. Takes under 2 minutes.</div>
+    </div>
+    <div class="step">
+      <div class="step-title">We prepare your document</div>
+      <div class="step-desc">Your document is prepared based on your specific inputs and applicable law.</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Review and quality check</div>
+      <div class="step-desc">Every document is reviewed for completeness, consistency, and accuracy.</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Delivered to your inbox</div>
+      <div class="step-desc">Receive your fully editable Word file by email, as fast as possible.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial">
+  <blockquote>"I needed a solid NDA fast and Safe Legal delivered exactly what I needed — clean, professional, and customized to my situation."</blockquote>
+  <cite>Client · New York</cite>
+</div>
+
+<!-- LEGAL DISCLAIMER -->
+<div class="legal-disclaimer">
+  <p><strong>Legal Disclaimer:</strong> Safe Legal is not a law firm and does not provide legal advice. All documents provided through this platform are self-help legal forms intended for informational and educational purposes only. Use of this service does not create an attorney-client relationship. Safe Legal makes no representations or warranties regarding the legal sufficiency of any document for your specific needs. We strongly recommend consulting a licensed attorney in your state before signing any legal document.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>Safe Legal</strong> · Legal Document Services<br>
+  contact@safelegal.com<br>
+  <span>© 2026 Safe Legal. All rights reserved. Not a law firm. Not legal advice.</span></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

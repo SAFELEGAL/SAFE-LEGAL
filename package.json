@@ -1,0 +1,8 @@
+{
+  "name": "safe-legal",
+  "version": "1.0.0",
+  "description": "Safe Legal – Professional Legal Document Services",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Document is Ready – Safe Legal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .success-wrap { max-width: 780px; margin: 4rem auto; padding: 0 2rem; }
+    .success-icon { font-size: 48px; margin-bottom: 1rem; }
+    .success-wrap h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 500; margin-bottom: 0.75rem; }
+    .success-wrap p { color: var(--muted); font-size: 15px; font-weight: 300; line-height: 1.7; margin-bottom: 1rem; }
+    #success-status { font-size: 14px; color: var(--gold); font-weight: 500; margin: 1.5rem 0; }
+    .doc-box { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 1.5rem; }
+    .doc-box-header { background: var(--cream2); border-bottom: 1px solid var(--border); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; }
+    .doc-box-header span { font-size: 13px; font-weight: 500; }
+    .doc-box-header button { font-size: 12px; padding: 5px 14px; border: 1px solid var(--border); border-radius: 4px; background: transparent; cursor: pointer; font-family: 'DM Sans', sans-serif; color: var(--muted); }
+    .doc-box-content { padding: 1.5rem; max-height: 600px; overflow-y: auto; }
+    .doc-box-content pre { white-space: pre-wrap; font-family: 'DM Sans', sans-serif; font-size: 13px; line-height: 1.9; color: var(--text); }
+    .back-link { display: inline-block; margin-top: 2rem; color: var(--navy); font-size: 13px; text-decoration: none; border-bottom: 1px solid var(--border); }
+    .loading-dots span { animation: pulse 1.2s infinite; display: inline-block; }
+    .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes pulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 18 18" fill="none"><path d="M9 1L2 5v8l7 4 7-4V5L9 1z" stroke="#0B1F3A" stroke-width="1.5" fill="none"/><path d="M9 6v6M6.5 9h5" stroke="#0B1F3A" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="nav-brand">Safe Legal<span>Legal Document Services</span></div>
+  </div>
+  <a class="nav-cta" href="/#generator">Get another document</a>
+</nav>
+
+<div class="success-wrap">
+  <div class="success-icon">✅</div>
+  <h1>Payment confirmed. Thank you!</h1>
+  <p>Your document is being prepared right now. Once ready, it will also be sent to your email address. Please keep this page open.</p>
+  <div id="success-status" class="loading-dots">
+    Preparing your document <span>.</span><span>.</span><span>.</span>
+  </div>
+
+  <div id="doc-section" style="display:none;">
+    <div class="doc-box">
+      <div class="doc-box-header">
+        <span>Your document</span>
+        <button onclick="copyDoc()">Copy text</button>
+      </div>
+      <div class="doc-box-content">
+        <pre id="doc-preview"></pre>
+      </div>
+    </div>
+    <p style="margin-top:1rem;font-size:12px;">A copy has also been sent to your email. The document is in plain text — paste it into Microsoft Word or Google Docs to format and sign.</p>
+  </div>
+
+  <a class="back-link" href="/">← Back to Safe Legal</a>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
