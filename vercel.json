@@ -6,9 +6,5 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/(.*)", "dest": "/$1" }
-  ],
-  "env": {
-    "STRIPE_SECRET_KEY": "@stripe_secret_key",
-    "SITE_URL": "@site_url"
-  }
+  ]
 }
