@@ -1,3 +1,7 @@
+const EMAILJS_PUBLIC_KEY  = 'XYUJUh5i2l5B919aX';
+const EMAILJS_SERVICE_ID  = 'service_11givvs';
+const EMAILJS_TEMPLATE_ID = 'template_il51ahz';
+
 const WISE_LINKS = {
   nda:      'https://wise.com/pay/r/k9_Y-nMBl0z8g4E',
   freelance:'https://wise.com/pay/r/tASuaAGZcmioABY',
@@ -15,17 +19,6 @@ function switchTab(tab) {
     document.getElementById('tab-' + t).classList.toggle('active', t === tab);
     document.getElementById('panel-' + t).classList.toggle('active', t === tab);
   });
-}
-
-function handleCheckout(tipo, price) {
-  const email = prompt('Enter your email address to receive your document:');
-  if (!email || !email.includes('@')) {
-    alert('Please enter a valid email address.');
-    return;
-  }
-  sessionStorage.setItem('sl_tipo', tipo);
-  sessionStorage.setItem('sl_email', email);
-  window.location.href = WISE_LINKS[tipo];
 }
 
 function collectFormData(tipo) {
@@ -103,15 +96,44 @@ Separate both documents with clear headings. Formal US legal style.`;
   }
 }
 
-async function handleSuccessPage() {
-  const tipo  = sessionStorage.getItem('sl_tipo');
-  const email = sessionStorage.getItem('sl_email');
-  if (!tipo) return;
+async function handleCheckout(tipo, price) {
+  const email = prompt('Enter your email address to receive your document:');
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address.');
+    return;
+  }
 
   const formData = collectFormData(tipo);
-  if (!formData) return;
+  const product  = PRODUCTS[tipo];
 
-  const prompt = buildPrompt(tipo, formData);
+  try {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      doc_type:     product.name,
+      client_email: email,
+      price:        '$' + product.price,
+      form_data:    JSON.stringify(formData, null, 2),
+    });
+  } catch(e) {
+    console.error('EmailJS error:', e);
+  }
+
+  sessionStorage.setItem('sl_tipo',  tipo);
+  sessionStorage.setItem('sl_email', email);
+  sessionStorage.setItem('sl_data',  JSON.stringify(formData));
+
+  window.location.href = WISE_LINKS[tipo];
+}
+
+async function handleSuccessPage() {
+  const tipo      = sessionStorage.getItem('sl_tipo');
+  const email     = sessionStorage.getItem('sl_email');
+  const savedData = sessionStorage.getItem('sl_data');
+  if (!tipo || !savedData) return;
+
+  const formData = JSON.parse(savedData);
+  const prompt   = buildPrompt(tipo, formData);
+
   document.getElementById('success-status').textContent = 'Preparing your document...';
 
   try {
@@ -125,13 +147,14 @@ async function handleSuccessPage() {
       })
     });
     const result = await resp.json();
-    const text = result.content.map(b => b.text || '').join('');
+    const text   = result.content.map(b => b.text || '').join('');
     document.getElementById('success-status').textContent = 'Your document is ready!';
-    document.getElementById('doc-preview').textContent = text;
-    document.getElementById('doc-section').style.display = 'block';
+    document.getElementById('doc-preview').textContent    = text;
+    document.getElementById('doc-section').style.display  = 'block';
     sessionStorage.clear();
   } catch(e) {
-    document.getElementById('success-status').textContent = 'Something went wrong. Please contact us at contact@safelegal.com';
+    document.getElementById('success-status').textContent =
+      'Something went wrong. Please contact us at contact@safelegal.com';
   }
 }
 
